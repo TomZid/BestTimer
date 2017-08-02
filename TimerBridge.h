@@ -10,5 +10,6 @@
 #import "DeallocDefine.h"
 
 @interface TimerBridge : NSObject
-- (instancetype)initWithReceiver:(id)receiver deallocHandler:(DeallocHandler)handler;
+- (instancetype)initWithReceiver:(id)receiver;
+- (void)setTimer:(NSTimer*)timer;
 @end

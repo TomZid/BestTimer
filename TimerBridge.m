@@ -9,24 +9,26 @@
 #import "TimerBridge.h"
 #import "NSObject+DeallocHandler.h"
 
+static NSTimer *_timer;
+
 @implementation TimerBridge
 {
     __weak id _receiver;
-    DeallocHandler _handler;
 }
-- (instancetype)initWithReceiver:(id)receiver deallocHandler:(DeallocHandler)handler {
+- (instancetype)initWithReceiver:(id)receiver {
     if (self = [super init]) {
         NSParameterAssert(receiver);
-        NSParameterAssert(handler);
         _receiver = receiver;
-        _handler = handler;
         [_receiver deallocHandler:^{
-            if (_handler) {
-                _handler();
-            }
+            [_timer invalidate];
+            _timer = nil;
         }];
     }
     return self;
+}
+
+- (void)setTimer:(NSTimer*)timer {
+    _timer = timer;
 }
 
 - (id)forwardingTargetForSelector:(SEL)aSelector {

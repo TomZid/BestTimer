@@ -16,17 +16,14 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    TimerBridge *bridge = [[TimerBridge alloc] initWithReceiver:self deallocHandler:^{
-        [_timer invalidate];
-        _timer = nil;
-    }];
+    TimerBridge *bridge = [[TimerBridge alloc] initWithReceiver:self];
     _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:bridge selector:@selector(count) userInfo:nil repeats:YES];
     [_timer fire];
+    [bridge setTimer:_timer];
 }
 
 - (void)count {
-    static int num = 0;
-    [label setText:[NSString stringWithFormat:@"现在是: %i", num++]];
+    [label setText:[NSString stringWithFormat:@"%i", [label.text intValue] + 1]];
 }
 
 @end
