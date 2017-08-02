@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kbh-2Y-Sdm">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRa-Wn-baj">
+                                <rect key="frame" x="164" y="318" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="6uC-An-iD8"/>
+                                </constraints>
+                                <state key="normal" title="PUSH"/>
+                                <connections>
+                                    <segue destination="0nB-Id-oWX" kind="show" id="sI7-7P-aCg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BRa-Wn-baj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1bB-Ti-jSU"/>
+                            <constraint firstItem="BRa-Wn-baj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aaZ-uD-Gg0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tOm-7F-zlZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1098" y="139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5Rf-wZ-whv">
+            <objects>
+                <viewController id="0nB-Id-oWX" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gdb-Ud-v96"/>
+                        <viewControllerLayoutGuide type="bottom" id="Yci-rV-B99"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cfy-C8-YUA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1&gt; 进入本页面开启Timer 2&gt;退出页面，本试图控制器释放同时Timer释放" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnc-hn-K7s">
+                                <rect key="frame" x="50" y="303" width="274" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbC-bU-emm">
+                                <rect key="frame" x="166" y="187" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cnc-hn-K7s" firstAttribute="top" secondItem="SbC-bU-emm" secondAttribute="bottom" constant="95" id="OGJ-Gf-A3E"/>
+                            <constraint firstItem="cnc-hn-K7s" firstAttribute="leading" secondItem="Cfy-C8-YUA" secondAttribute="leadingMargin" constant="34" id="avw-eE-Nnm"/>
+                            <constraint firstItem="SbC-bU-emm" firstAttribute="centerX" secondItem="Cfy-C8-YUA" secondAttribute="centerX" id="jIr-jq-4Sa"/>
+                            <constraint firstItem="cnc-hn-K7s" firstAttribute="centerY" secondItem="Cfy-C8-YUA" secondAttribute="centerY" id="lAh-tu-vQe"/>
+                            <constraint firstItem="SbC-bU-emm" firstAttribute="centerX" secondItem="cnc-hn-K7s" secondAttribute="centerX" id="quI-lQ-Q2R"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="SbC-bU-emm" id="1KH-sv-sSX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5o4-dX-X6c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1888.8" y="141.67916041979012"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jfH-kA-4K6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kbh-2Y-Sdm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IwW-e2-MOY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="C8m-3O-dWY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vYd-NW-OtS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="294" y="139"/>
+        </scene>
+    </scenes>
+</document>
