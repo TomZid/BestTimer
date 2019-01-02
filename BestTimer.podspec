@@ -24,7 +24,18 @@ Pod::Spec.new do |s|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = "BestTimer description"
+  #  s.description  = "BestTimer description"
+    s.description  = <<-DESC
+                       BestTimer description
+
+                       * Markdown format.
+                       * Don't worry about the indent, we strip it!
+                       DESC
+
+作者：爱搞事的Snoopy
+链接：https://www.jianshu.com/p/48c229d13fdd
+來源：简书
+简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
 
   s.homepage     = "https://github.com/TomZid/BestTimer"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
